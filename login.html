@@ -1,0 +1,86 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Add your CSS styling here */
+        body {
+            background-image: url('jcomp.jpeg'); 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #101010;
+            color: #fff;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            background-color: rgba(105, 97, 97, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            border-style: groove;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 3px solid black;
+            border-radius: 20px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: #0aafeb;
+            color: black;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: 2px solid black;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0a68eb;
+        }
+    </style>
+    <title>Login</title>
+</head>
+<body>
+    <b><p style ="font-size:45px;">Login</p></b>
+    <form id="loginForm" onsubmit="authenticate(event)">
+        <b><label for="username">Username:</label></b><br>
+        <input type="text" id="username" name="username" required><br><br>
+        <b><label for="password">Password:</label></b><br>
+        <input type="password" id="password" name="password" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function authenticate(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            // Add your authentication logic here
+            // Simulated authentication
+            if (username === 'admin' && password === 'admin') {
+                window.location.href = 'index.html';
+            } else {
+                alert('Invalid username or password. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>

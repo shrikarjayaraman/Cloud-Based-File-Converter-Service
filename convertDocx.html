@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    /* Add your CSS styling here */
+    body {
+        background-image: url('jcomp.jpeg'); 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #101010;
+    }
+    .container {
+        color: white;
+        text-align: center;
+        background-color: rgb(105, 97, 97);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    input[type="file"] {
+        margin: 10px 0;
+        color: white;
+    }
+    input[type="submit"] {
+        padding: 10px 20px;
+        background-color: #0aafeb;
+        border: 2px solid black;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        color: black;
+    }
+
+    input[type="submit"]:hover {
+        color: #0aafeb;
+        background-color: black;
+    }
+
+</style>
+<title>Convert DOCX to PDF</title>
+</head>
+<body>
+<div class="container">
+    <h2>Convert DOCX to PDF</h2>
+    <form action="/convert" method="post" enctype="multipart/form-data">
+        <input type="file" name="docxFile" accept=".docx">
+        <br>
+        <input type="submit" value="Convert DOCX to PDF">
+        <input type="hidden" name="type" value="2">
+    </form>
+</div>
+<script>
+    // Add your JavaScript for responsiveness here
+    // Example: Implement responsive design using JavaScript
+    window.onresize = function(event) {
+        // Implement your logic here for responsive behavior
+    };
+</script>
+</body>
+</html>

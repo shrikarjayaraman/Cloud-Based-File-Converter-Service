@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    /* Add your CSS styling here */
+    body {
+        background-image: url('jcomp.jpeg'); 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #101010;
+    }
+    .heading-container {
+        text-align: center;
+        margin-bottom: 10px;
+        padding: 20px;
+    }
+    .container {
+        text-align: center;
+        background-color: rgba(105, 97, 97, 0.8);
+        color: rgb(239, 233, 233);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .service-button {
+        padding: 10px 20px;
+        margin: 10px;
+        border: 2px solid black;
+        color: black;
+        background-color: #0aafeb;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .service-button:hover {
+        color: #0aafeb;
+        background-color: black;
+    }
+</style>
+<title>File Services Website</title>
+</head>
+<body>
+    <div class="heading-container">
+       <b> <p style="color: white; font-size: 60px;">Cloud Based File Converter Service</p></b>
+    </div>
+
+    <div class="container">
+        <h2>File Services</h2>
+        <button class="service-button" onclick="openPopup('merge.html')">Merge PDFs</button>
+        <button class="service-button" onclick="openPopup('convertDocx.html')">Convert DOCX to PDF</button>
+        <button class="service-button" onclick="openPopup('convertJpg.html')">Convert JPG to PNG</button>
+    </div>
+    <script>
+        function openPopup(url) {
+            window.open(url, 'ServicePopup', 'width=600,height=400');
+        }
+        // Add your JavaScript for responsiveness here
+        // Example: Implement responsive design using JavaScript
+        window.onresize = function(event) {
+            // Implement your logic here for responsive behavior
+        };
+    </script>
+</body>
+</html>
